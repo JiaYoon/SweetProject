@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dal_a.snapshoot" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <permission
+        android:name="com.dal_a.snapshoot.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.dal_a.snapshoot.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".LockScreenService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListActivity"
+            android:label="@string/title_activity_list" />
+        <activity
+            android:name=".LockScreenActivity"
+            android:label="@string/title_activity_lock_screen" />
+        <activity
+            android:name=".DetailPhotoActivity"
+            android:label="@string/title_activity_detail_photo"
+            android:parentActivityName=".ListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dal_a.snapshoot.ListActivity" />
+        </activity>
+        <activity
+            android:name=".SelectPhotoActivity"
+            android:label="@string/title_activity_select_photo"
+            android:parentActivityName=".ListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dal_a.snapshoot.ListActivity" />
+        </activity>
+        <activity
+            android:name=".ModifyPhotoActivity"
+            android:label="@string/title_activity_modify_photo"
+            android:parentActivityName=".SelectPhotoActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dal_a.snapshoot.SelectPhotoActivity" />
+        </activity>
+
+        <!-- 죽지 않는 서비스를 위한 리시버 -->
+        <receiver android:name=".BroadcastListener" >
+            <intent-filter>
+                <action android:name="ACTION.Restart.SanpLockService" /> <!-- 커스텀으로 정의한 인텐트 종류 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- facebook -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".SelectCategoryActivity"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dal_a.snapshoot.SelectCategoryActivity" />
+
+        </activity>
+        <activity
+            android:name=".SelectCategoryActivity"
+            android:label="@string/title_activity_select_category"
+            android:parentActivityName=".ListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dal_a.snapshoot.ListActivity" />
+        </activity>
+    </application>
+
+</manifest>

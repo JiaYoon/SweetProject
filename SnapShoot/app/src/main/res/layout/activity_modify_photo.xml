@@ -1,0 +1,230 @@
+<LinearLayout
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_white_1000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="?attr/colorPrimaryDark"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:orientation="vertical">
+            
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.dal_a.snapshoot.view.FitImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/image"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center_horizontal" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/choice"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:layout_gravity="center">
+                        <Button
+                        android:id="@+id/lefttop"
+                        android:background="@color/md_pink_500"
+                            android:onClick="clickImageToSign"
+                            android:layout_gravity="left|top"
+                            android:layout_margin="2dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:alpha="0.5"/>
+
+                        <Button
+                        android:id="@+id/righttop"
+                            android:background="@color/md_orange_500"
+                            android:onClick="clickImageToSign"
+                            android:layout_gravity="bottom|right"
+                            android:layout_margin="2dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:alpha="0.5"/>
+
+
+                        <Button
+                        android:id="@+id/leftbottom"
+                            android:background="@color/md_blue_500"
+                            android:onClick="clickImageToSign"
+                            android:layout_gravity="bottom|left"
+                            android:layout_margin="2dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:alpha="0.5"/>
+
+                        <Button
+                        android:id="@+id/rightbottom"
+                            android:background="@color/md_green_500"
+                            android:onClick="clickImageToSign"
+                            android:layout_gravity="bottom|right"
+                            android:layout_margin="2dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:alpha="0.5"/>
+
+
+                    </GridLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쯰아"
+                    android:id="@+id/userName" />
+
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_black_1000_50"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+
+            <!--<LinearLayout-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="낙관 설정"-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:layout_margin="8dp" />-->
+
+                <!--<RadioGroup-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:id="@+id/signOption">-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="left.top"-->
+                        <!--android:id="@+id/option1"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="center.top"-->
+                        <!--android:id="@+id/option2"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="right.top"-->
+                        <!--android:id="@+id/option3"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="left.bottom"-->
+                        <!--android:id="@+id/option4"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="center.bottm"-->
+                        <!--android:id="@+id/option5"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="right.bottm"-->
+                        <!--android:id="@+id/option6"-->
+                        <!--android:textColor="#000000"-->
+                        <!--android:layout_weight="1" />-->
+                <!--</RadioGroup>-->
+
+            <!--</LinearLayout>-->
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="0dp">
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/md_black_1000_75"
+                    android:textColorHint="@color/md_black_1000_50"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="0dp">
+
+
+            <EditText
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Expression"
+                    android:textColor="@color/md_black_1000_75"
+                    android:textColorHint="@color/md_black_1000_50"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

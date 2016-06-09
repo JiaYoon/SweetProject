@@ -1,0 +1,72 @@
+<com.dal_a.snapshoot.card.ArtistInformationCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- DetailPhotoActivity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal">
+
+        <com.facebook.login.widget.ProfilePictureView
+            android:id="@+id/userImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:id="@+id/avatar"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:src="@mipmap/ic_launcher"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist2"
+            android:text="한 Hohg"
+            android:paddingTop="6dp"
+
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/followers"
+            android:paddingTop="6dp"
+            android:text="212,334 followers"
+            android:textSize="8sp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow"
+            android:paddingTop="6dp"
+            android:id="@+id/follow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/introduction"
+            android:paddingTop="6dp"
+
+            android:text="우리가 가진 의식은 우리가 존재하는 기본적인 측면이라고 철학자 데이빗 차머스는 말합니다."
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="12sp"
+            android:lineSpacingMultiplier="1.6"
+            android:gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/view_divider"/>
+
+</com.dal_a.snapshoot.card.ArtistInformationCardView>

@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dal_a.snapshoot.LockScreenActivity">
+
+    <com.nvanbenschoten.motion.ParallaxImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:motionScaledIntensity="true"
+        app:motionIntensity="1.2"
+        />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_stroke_visible="true"
+        app:fab_icon="@mipmap/detail"
+        app:fab_colorNormal="@color/md_blue_grey_700"
+        app:fab_colorPressed="@color/md_blue_grey_800"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.dal_a.snapshoot.LockScreenEffectCanvas
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/effectScreen"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clock"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="70sp"
+        android:shadowColor="@color/md_black_1000_50"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textStyle="bold" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:textSize="14sp"
+        android:layout_below="@+id/clock"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/md_black_1000_50"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Johnny Kim"
+        android:id="@+id/LockName"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="8dp"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+        android:shadowColor="@color/md_black_1000_50"
+        android:textColor="@color/md_white_1000_75" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+
+        android:layout_marginLeft="4dp"
+        android:text="Taiwan"
+        android:id="@+id/LockTitle"
+        android:layout_above="@+id/LockName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+
+        android:shadowColor="@color/md_black_1000_50"
+        android:textColor="@color/md_white_1000_75" />
+
+</RelativeLayout>
+    <!--fab:fab_icon="@drawable/ic_fab_star"-->

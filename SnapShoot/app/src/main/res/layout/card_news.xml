@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dal_a.snapshoot.card.NewsCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--android:layout_marginBottom="1dp">-->
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.dal_a.snapshoot.view.FitWidthImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="top">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:text="한 Hohg"
+                android:shadowColor="@color/md_black_1000_75"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="10"
+                android:paddingTop="4dp"
+                android:paddingLeft="4dp"
+                android:textSize="8sp"
+                android:textColor="@color/md_white_1000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textSize="16sp"
+                android:paddingLeft="4dp"
+                android:textStyle="bold"
+                android:shadowColor="@color/md_black_1000_75"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="10"
+                android:text="그녀는 소녀였다"
+                android:textColor="@color/md_white_1000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@color/md_black_1000_50"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|right"
+            android:gravity="center_vertical|right">
+
+                <ImageView
+                    android:id="@+id/heart"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@mipmap/heart"
+                    android:clickable="true"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:id="@+id/heartNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:shadowColor="@color/md_black_1000_50"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="10"
+                    android:textColor="@color/md_white_1000"
+                    android:text="0" />
+
+                    <ImageView
+                        android:id="@+id/comment"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@mipmap/comment"
+                        android:clickable="true"
+                        android:padding="4dp"/>
+
+                    <TextView
+                        android:id="@+id/NewsCommentNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:shadowColor="@color/md_black_1000_50"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
+                        android:shadowRadius="10"
+                        android:textColor="@color/md_white_1000"/>
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/share"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@mipmap/share"
+                android:clickable="true"
+                android:padding="4dp"
+                android:focusable="false" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="64dp"-->
+            <!--android:layout_gravity="bottom|right"-->
+            <!--android:gravity="center_vertical|right">-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="8dp">-->
+
+                <!--<Button-->
+                    <!--style="?android:attr/buttonStyleSmall"-->
+                    <!--android:layout_width="64dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/heartButton"-->
+                    <!--android:layout_gravity="left|top" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/heartNum"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="0"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textColor="@color/md_white_1000"-->
+                    <!--android:layout_gravity="right|center_vertical"-->
+                    <!--android:layout_marginRight="10dp" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/heart"-->
+                    <!--android:layout_width="36dp"-->
+                    <!--android:layout_height="36dp"-->
+                    <!--android:src="@mipmap/heart"-->
+                    <!--android:clickable="true"-->
+                    <!--android:focusable="false"-->
+                    <!--android:layout_gravity="left|center_vertical"-->
+                    <!--android:layout_marginLeft="6dp" />-->
+
+            <!--</FrameLayout>-->
+
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="8dp"-->
+                <!--android:layout_marginRight="4dp">-->
+
+                <!--<Button-->
+                    <!--style="?android:attr/buttonStyleSmall"-->
+                    <!--android:layout_width="64dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="left|top"-->
+                    <!--android:id="@+id/commentButton"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/commentNum"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="0"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textColor="@color/md_white_1000"-->
+                    <!--android:layout_gravity="right|center_vertical"-->
+                    <!--android:layout_marginRight="10dp" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/comment"-->
+                    <!--android:layout_width="36dp"-->
+                    <!--android:layout_height="36dp"-->
+                    <!--android:src="@mipmap/heart"-->
+                    <!--android:clickable="true"-->
+                    <!--android:focusable="false"-->
+                    <!--android:layout_gravity="left|center_vertical"-->
+                    <!--android:layout_marginLeft="6dp" />-->
+
+            <!--</FrameLayout>-->
+
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/share"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="36dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="36dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@mipmap/share"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:clickable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:padding="4dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="false" />&ndash;&gt;-->
+
+        <!--</LinearLayout>-->
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/md_blue_grey_900"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+</com.dal_a.snapshoot.card.NewsCardView>

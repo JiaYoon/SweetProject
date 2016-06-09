@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dal_a.snapshoot.model.SquareImageCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+
+
+    <com.dal_a.snapshoot.view.SquareImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image"
+            android:scaleType="centerCrop" />
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/interactionEffect"-->
+        <!--android:background="@drawable/ripple_button" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/check"-->
+        <!--android:src="@drawable/ic_check"-->
+        <!--android:background="@drawable/ripple_button"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:scaleType="center"-->
+        <!--android:layout_gravity="right|top"-->
+        <!--android:visibility="invisible" />-->
+
+    </FrameLayout>
+</com.dal_a.snapshoot.model.SquareImageCardView>

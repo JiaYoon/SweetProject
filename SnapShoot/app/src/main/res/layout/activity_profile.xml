@@ -1,0 +1,134 @@
+<LinearLayout
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_white_1000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="?attr/colorPrimaryDark"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            android:orientation="vertical">
+
+
+            <com.facebook.login.widget.ProfilePictureView
+                android:id="@+id/userImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp" />
+
+            <!--<com.dal_a.snapshoot.view.MyRecyclerView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/photos"/>-->
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="0dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="이름이 무엇인가요?"
+                    android:id="@+id/inputNameText"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/md_black_1000_75"
+                    android:textColorHint="@color/md_black_1000_50"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="0dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="어떤 사진가 인가요? 당신의 이야기를 들려주세요."
+                    android:id="@+id/inputIntroductionText"
+                    android:textColor="@color/md_black_1000_75"
+                    android:textColorHint="@color/md_black_1000_50"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!--&lt;!&ndash; 앱 내에서 사용할 이름 &ndash;&gt;-->
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/inputName"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="이름을 입력해주세요"-->
+                    <!--android:id="@+id/inputNameText"-->
+                    <!--android:layout_above="@+id/join"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:singleLine="true"/>-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--&lt;!&ndash; 앱 내에서 사용할 자기소개 &ndash;&gt;-->
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/inputIntroduction"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="어떤 사진가 인가요? 당신의 이야기를 들려주세요."-->
+                    <!--android:id="@+id/inputIntroductionText"-->
+                    <!--android:layout_above="@+id/join"-->
+                    <!--android:layout_alignParentStart="true"/>-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/join"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="확인"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_alignParentEnd="true" />-->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

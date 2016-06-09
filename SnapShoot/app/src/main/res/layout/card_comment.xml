@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dal_a.snapshoot.card.CommentCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전연희"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:id="@+id/name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" · "
+            android:textSize="12sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3시간전"
+            android:textSize="12sp"
+            android:id="@+id/time" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="우리가 가진 의식은 우리가 존재하는 기본적인 측면이라고 철학자 데이빗 차머스는 말합니다. 우리가 이보다 더 직접적으로"
+        android:paddingTop="6dp"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+
+        android:lineSpacingMultiplier="1.2"
+
+        android:id="@+id/comment" />
+
+    <include layout="@layout/view_divider"/>
+
+</com.dal_a.snapshoot.card.CommentCardView>

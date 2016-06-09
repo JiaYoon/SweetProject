@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dal_a.snapshoot.card.PhotoInformationCardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist"
+            android:text="한 Hohg"
+            android:paddingTop="6dp"
+            android:textSize="8sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textSize="16sp"
+            android:paddingTop="6dp"
+            android:textStyle="bold"
+            android:text="그녀는 소녀였다"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ect"
+            android:textSize="8sp"
+            android:paddingTop="6dp"
+            android:text="2015.9.18 12:15AM Canon 40D 위안부 소녀상 앞에서"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:textSize="12sp"
+            android:paddingTop="16dp"
+            android:lineSpacingMultiplier="1.6"
+            android:text="우리가 가진 의식은 우리가 존재하는 기본적인 측면이라고 철학자 데이빗 차머스는 말합니다. 우리가 이보다 더 직접적으로 아는 것은 없습니다. 하지만 동시에 의식은 우주에서 가장 신비로운 현상입니다. 그는 우리 머릿속에서 사영되는 영화에 대해 생각하는 몇 가지 방식에 대하여 얘기합니다."/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider"/>
+
+</com.dal_a.snapshoot.card.PhotoInformationCardView>
